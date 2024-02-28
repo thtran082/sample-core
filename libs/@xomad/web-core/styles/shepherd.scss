@@ -1,0 +1,119 @@
+.xomad-shepherd {
+  $space: var(--space-sm);
+  max-width: 400px;
+
+  > .shepherd-arrow::before {
+    background-color: var(--white) !important;
+  }
+
+  &[data-popper-placement="right"] {
+    margin-left: var(--space-md) !important;
+  }
+
+  &[data-popper-placement="left"] {
+    margin-right: var(--space-md) !important;
+  }
+
+  &[data-popper-placement="top"] {
+    margin-bottom: var(--space-md) !important;
+  }
+
+  &[data-popper-placement="bottom"] {
+    margin-top: var(--space-md) !important;
+  }
+
+  &.shepherd-has-title .shepherd-content {
+    .shepherd-header {
+      background-color: transparent;
+      padding: $space $space 0;
+
+      .shepherd-title {
+        color: var(--color-primary);
+        font: 700 var(--text-md-size)/var(--text-md-line-height) var(--font-primary);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .shepherd-cancel-icon {
+        color: var(--color-secondary);
+        font-size: var(--text-lg-size);
+      }
+    }
+
+    .shepherd-text {
+      padding: $space $space 0;
+      font: var(--text-size)/var(--text-line-height) var(--font-primary);
+    }
+
+    .shepherd-footer {
+      display: flex;
+      place-content: center;
+      gap: $space;
+      padding: var(--space-xl) $space $space;
+
+      .shepherd-button {
+        font: bold var(--text-sm-size)/var(--text-sm-line-height) var(--font-primary);
+        text-transform: uppercase;
+        width: 50%;
+      }
+    }
+  }
+
+  &-tour-overlay {
+    position: fixed;
+    inset: 0 0 0 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+
+  &-remember-choice {
+    padding: var(--space-md) 0 0;
+    user-select: none;
+
+    label {
+      font-size: var(--text-size);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: var(--space-xxs);
+    }
+
+    .shepherd-checkbox {
+      &:checked ~ label > .icon[data-checked],
+      &:not(:checked) ~ label > .icon[data-unchecked] {
+        display: inline !important;
+      }
+    }
+
+    .icon {
+      font-size: var(--text-lg-size) !important;
+      display: none !important;
+
+      &[data-unchecked] {
+        color: var(--color-secondary);
+      }
+
+      &[data-checked] {
+        color: var(--color-primary);
+      }
+    }
+
+  }
+}
+
+.shepherd-enabled {
+  position: relative;
+  z-index: 1001;
+
+  &.shepherd-target {
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      inset: calc(var(--space-xxs) * -1);
+      background: var(--white);
+
+      border-radius: var(--space-xxs);
+    }
+  }
+}

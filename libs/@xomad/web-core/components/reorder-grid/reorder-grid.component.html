@@ -1,0 +1,24 @@
+<div class="reorder-container" cdkDropListGroup>
+    <div
+        cdkDropList
+        (cdkDropListEntered)="onDropListEntered($event)"
+        (cdkDropListDropped)="dropListDropped()"
+    ></div>
+    <div
+        *ngFor="let item of items; index as index"
+        cdkDropList
+        (cdkDropListEntered)="onDropListEntered($event)"
+        (cdkDropListDropped)="dropListDropped()"
+    >
+        <div class="item" cdkDrag>
+            <ng-template
+                *ngTemplateOutlet="
+                reorderItemTmpl;
+                context: { $implicit: item, index: index }
+            "></ng-template>
+            <button xo-fab-icon appearance="secondary" withShadow cdkDragHandle>
+              <span class="material-icons-outlined">drag_indicator</span>
+            </button>
+        </div>
+    </div>
+</div>

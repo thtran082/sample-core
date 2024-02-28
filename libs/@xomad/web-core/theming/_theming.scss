@@ -1,0 +1,28 @@
+@use "./prebuilt/theplug";
+
+@mixin _generate-palette($base-palette, $prefix: '') {
+  @each $hue, $color in $base-palette {
+    $new-prefix: if($prefix == '', $hue, '#{$prefix}-#{$hue}');
+    @if (type-of($color) == map) {
+      @include _generate-palette($color, $new-prefix);
+    } @else {
+      --color-#{$new-prefix}: #{$color};
+    }
+  }
+}
+
+/// Creates a map of hues to colors for a theme
+/// @param {Map} $base-palette Map of hue keys to color values for the basis for this palette.
+@mixin define-palette($base-palette) {
+  :root {
+    @include _generate-palette($base-palette);
+  }
+}
+
+@mixin define-font($font) {
+  :root {
+    @each $key, $value in $font {
+      --font-#{$key}: #{$value};
+    }
+  }
+}

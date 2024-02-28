@@ -1,0 +1,63 @@
+// theplug https://app.abstract.com/projects/1f658440-6570-11e9-81ca-475b0a38857f/branches/master/commits/974e155646223a951aae0bd51c345c945c0af46d/files/77B80C7A-6D8B-4E78-9D17-A343E8E25C77/layers/3F662B96-775E-415C-9CD3-61BE14EDB62E?mode=design
+
+$palette: (
+  primary: #E30000,
+  primary-light: rgba(227, 0, 0, 0.1), // use chroma.js
+  primary-dark: #141414,
+  secondary: #747d89,
+  secondary-light: #dfe4ee,
+  secondary-lighter: #f5f7fa,
+  secondary-dark: #38404e,
+
+  success: var(--color-green),
+  error: var(--color-red),
+
+  text: var(--black),
+  link: var(--color-primary),
+  link-visited: var(--color-primary),
+
+  border: var(--gray-2),
+  border-light: #dfe4ee,
+
+  body-text: var(--color-primary-dark),
+  body-bg: #fafafa,
+
+  header: (
+    primary: #000,
+  )
+);
+
+$font: (
+  primary: "'Montserrat', sans-serif",
+  secondary: "'Lato', sans-serif",
+);
+
+/*
+  preload with Montserrat font, with 3 variants
+- 300: light
+- 400: regular, normal
+- 700: bold
+ */
+
+// can't use light from Google, it's different than the one of designer
+@mixin setup-fonts() {
+  @font-face {
+    font-family: 'Montserrat';
+    src: url(https://content.xomad.com/static_app2/permanent/font/montserrat-light-webfont.woff2) format('woff2'),
+    url(https://content.xomad.com/static_app2/permanent/font/montserrat-light-webfont.woff) format('woff'),
+    url(https://content.xomad.com/static_app2/permanent/font/montserrat-light-webfont.ttf) format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Lato';
+    src: url(https://content.xomad.com/static_app2/permanent/font/lato-light-webfont.woff2) format('woff2'),
+    url(https://content.xomad.com/static_app2/permanent/font/lato-light-webfont.woff) format('woff'),
+    url(https://content.xomad.com/static_app2/permanent/font/lato-light-webfont.ttf) format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+}
+
+@include setup-fonts();

@@ -1,0 +1,16 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../../dist/libs/core",
+  "lib": {
+    "entryFile": "public-api.ts"
+  },
+  "whitelistedNonPeerDependencies": [
+    "."
+  ],
+  "assets": [
+    "theming",
+    "icons",
+    "styles",
+    "index.scss"
+  ]
+}

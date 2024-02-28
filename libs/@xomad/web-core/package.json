@@ -1,0 +1,34 @@
+{
+  "name": "@xomad/web-core",
+  "version": "1.0.6",
+  "peerDependencies": {
+    "@angular/animations": ">=9.1.0",
+    "@angular/common": ">=9.1.0",
+    "@angular/compiler": ">=9.1.0",
+    "@angular/core": ">=9.1.0",
+    "@angular/forms": ">=9.1.0",
+    "@angular/platform-browser": ">=9.1.0",
+    "@angular/platform-browser-dynamic": ">=9.1.0"
+  },
+  "dependencies": {
+    "tslib": "^1.10.0",
+    "angular-shepherd": "^0.7.0"
+  },
+  "exports": {
+    ".": {
+      "sass": "./index.scss"
+    },
+    "./theming": {
+      "sass": "./_theming.scss"
+    },
+    "./icons": {
+      "sass": "./icons/*"
+    },
+    "./icons/material-icons": {
+      "sass": "./icons/material-icons/index.scss"
+    },
+    "./styles/shepherd":{
+      "sass": "./styles/shepherd.scss"
+    }
+  }
+}

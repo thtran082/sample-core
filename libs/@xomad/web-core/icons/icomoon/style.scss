@@ -1,0 +1,982 @@
+@use "variables" as *;
+
+$icomoon-font-path: 'libs/@xomad/web-core/icons/icomoon/fonts';
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?1yis5y');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?1yis5y#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?1yis5y') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?1yis5y') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?1yis5y##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="ico-"], [class*=" ico-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ico-person-add {
+  &:before {
+    content: $ico-person-add;
+  }
+}
+.ico-link {
+  &:before {
+    content: $ico-link;
+  }
+}
+.ico-visibility-outline {
+  &:before {
+    content: $ico-visibility-outline;
+  }
+}
+.ico-insights {
+  &:before {
+    content: $ico-insights;
+  }
+}
+.ico-trending-up {
+  &:before {
+    content: $ico-trending-up;
+  }
+}
+.ico-megaphone-outline {
+  &:before {
+    content: $ico-megaphone-outline;
+  }
+}
+.ico-data_thresholding {
+  &:before {
+    content: $ico-data_thresholding;
+  }
+}
+.ico-share1 {
+  &:before {
+    content: $ico-share1;
+  }
+}
+.ico-heart {
+  &:before {
+    content: $ico-heart;
+  }
+}
+.ico-logo-venmo {
+  &:before {
+    content: $ico-logo-venmo;
+  }
+}
+.ico-twitter-x-color {
+  &:before {
+    content: $ico-twitter-x-color;
+  }
+}
+.ico-twitter-x {
+  &:before {
+    content: $ico-twitter-x;
+  }
+}
+.ico-twitter-x-circle {
+  &:before {
+    content: $ico-twitter-x-circle;
+  }
+}
+.ico-more-vert {
+  &:before {
+    content: $ico-more-vert;
+  }
+}
+.ico-do-disturb-alt {
+  &:before {
+    content: $ico-do-disturb-alt;
+  }
+}
+.ico-filter-v2 {
+  &:before {
+    content: $ico-filter-v2;
+  }
+}
+.ico-swap-horiz-fixed {
+  &:before {
+    content: $ico-swap-horiz-fixed;
+  }
+}
+.ico-delete-filled {
+  &:before {
+    content: $ico-delete-filled;
+  }
+}
+.ico-drag-indicator {
+  &:before {
+    content: $ico-drag-indicator;
+  }
+}
+.ico-language-profile {
+  &:before {
+    content: $ico-language-profile;
+  }
+}
+.ico-location-profile {
+  &:before {
+    content: $ico-location-profile;
+  }
+}
+.ico-edit-outline {
+  &:before {
+    content: $ico-edit-outline;
+  }
+}
+.ico-upload-file {
+  &:before {
+    content: $ico-upload-file;
+  }
+}
+.ico-add {
+  &:before {
+    content: $ico-add;
+  }
+}
+.ico-settings-outline {
+  &:before {
+    content: $ico-settings-outline;
+  }
+}
+.ico-reorder {
+  &:before {
+    content: $ico-reorder;
+  }
+}
+.ico-drag-handle {
+  &:before {
+    content: $ico-drag-handle;
+  }
+}
+.ico-sort-2 {
+  &:before {
+    content: $ico-sort-2;
+  }
+}
+.ico-exclamation-circle {
+  &:before {
+    content: $ico-exclamation-circle;
+  }
+}
+.ico-accommodation {
+  &:before {
+    content: $ico-accommodation;
+  }
+}
+.ico-add-more-spl {
+  &:before {
+    content: $ico-add-more-spl;
+  }
+}
+.ico-add-user-group {
+  &:before {
+    content: $ico-add-user-group;
+  }
+}
+.ico-arr-down {
+  &:before {
+    content: $ico-arr-down;
+  }
+}
+.ico-arrow-down {
+  &:before {
+    content: $ico-arrow-down;
+  }
+}
+.ico-arrow-left {
+  &:before {
+    content: $ico-arrow-left;
+  }
+}
+.ico-arrow-right {
+  &:before {
+    content: $ico-arrow-right;
+  }
+}
+.ico-arrow-up {
+  &:before {
+    content: $ico-arrow-up;
+  }
+}
+.ico-arrow-up-down {
+  &:before {
+    content: $ico-arrow-up-down;
+  }
+}
+.ico-arr-up {
+  &:before {
+    content: $ico-arr-up;
+  }
+}
+.ico-audience {
+  &:before {
+    content: $ico-audience;
+  }
+}
+.ico-blog {
+  &:before {
+    content: $ico-blog;
+  }
+}
+.ico-blog-circle {
+  &:before {
+    content: $ico-blog-circle;
+  }
+}
+.ico-blogger {
+  &:before {
+    content: $ico-blogger;
+  }
+}
+.ico-blogger-round {
+  &:before {
+    content: $ico-blogger-round;
+  }
+}
+.ico-bubble-spl {
+  &:before {
+    content: $ico-bubble-spl;
+  }
+}
+.ico-calendar {
+  &:before {
+    content: $ico-calendar;
+  }
+}
+.ico-calendar-1 {
+  &:before {
+    content: $ico-calendar-1;
+  }
+}
+.ico-camera {
+  &:before {
+    content: $ico-camera;
+  }
+}
+.ico-card {
+  &:before {
+    content: $ico-card;
+  }
+}
+.ico-chart-fill {
+  &:before {
+    content: $ico-chart-fill;
+  }
+}
+.ico-chat-outline {
+  &:before {
+    content: $ico-chat-outline;
+  }
+}
+.ico-check {
+  &:before {
+    content: $ico-check;
+  }
+}
+.ico-check-badge {
+  &:before {
+    content: $ico-check-badge;
+  }
+}
+.ico-check-circle {
+  &:before {
+    content: $ico-check-circle;
+  }
+}
+.ico-checked {
+  &:before {
+    content: $ico-checked;
+  }
+}
+.ico-check-single {
+  &:before {
+    content: $ico-check-single;
+  }
+}
+.ico-circle-full {
+  &:before {
+    content: $ico-circle-full;
+  }
+}
+.ico-clock {
+  &:before {
+    content: $ico-clock;
+  }
+}
+.ico-close {
+  &:before {
+    content: $ico-close;
+  }
+}
+.ico-close-1 {
+  &:before {
+    content: $ico-close-1;
+  }
+}
+.ico-close-2 {
+  &:before {
+    content: $ico-close-2;
+  }
+}
+.ico-cloud-upload {
+  &:before {
+    content: $ico-cloud-upload;
+  }
+}
+.ico-collab-manage {
+  &:before {
+    content: $ico-collab-manage;
+  }
+}
+.ico-compare-arrow-left {
+  &:before {
+    content: $ico-compare-arrow-left;
+  }
+}
+.ico-compare-arrow-right {
+  &:before {
+    content: $ico-compare-arrow-right;
+  }
+}
+.ico-compass {
+  &:before {
+    content: $ico-compass;
+  }
+}
+.ico-created-proj {
+  &:before {
+    content: $ico-created-proj;
+  }
+}
+.ico-create-poll {
+  &:before {
+    content: $ico-create-poll;
+  }
+}
+.ico-cursor-move {
+  &:before {
+    content: $ico-cursor-move;
+  }
+}
+.ico-customer-support {
+  &:before {
+    content: $ico-customer-support;
+  }
+}
+.ico-delete {
+  &:before {
+    content: $ico-delete;
+  }
+}
+.ico-deselect {
+  &:before {
+    content: $ico-deselect;
+  }
+}
+.ico-direct-message-2 {
+  &:before {
+    content: $ico-direct-message-2;
+  }
+}
+.ico-do-not-disturb {
+  &:before {
+    content: $ico-do-not-disturb;
+  }
+}
+.ico-download {
+  &:before {
+    content: $ico-download;
+  }
+}
+.ico-download-file {
+  &:before {
+    content: $ico-download-file;
+  }
+}
+.ico-edit {
+  &:before {
+    content: $ico-edit;
+  }
+}
+.ico-email-out {
+  &:before {
+    content: $ico-email-out;
+  }
+}
+.ico-empty-group-block {
+  &:before {
+    content: $ico-empty-group-block;
+  }
+}
+.ico-empty-group-detail {
+  &:before {
+    content: $ico-empty-group-detail;
+  }
+}
+.ico-empty-icon {
+  &:before {
+    content: $ico-empty-icon;
+  }
+}
+.ico-facebook-circle {
+  &:before {
+    content: $ico-facebook-circle;
+  }
+}
+.ico-fill-text {
+  &:before {
+    content: $ico-fill-text;
+  }
+}
+.ico-filter {
+  &:before {
+    content: $ico-filter;
+  }
+}
+.ico-forward_to_inbox {
+  &:before {
+    content: $ico-forward_to_inbox;
+  }
+}
+.ico-gender-female {
+  &:before {
+    content: $ico-gender-female;
+  }
+}
+.ico-gender-male {
+  &:before {
+    content: $ico-gender-male;
+  }
+}
+.ico-gender-others {
+  &:before {
+    content: $ico-gender-others;
+  }
+}
+.ico-globe {
+  &:before {
+    content: $ico-globe;
+  }
+}
+.ico-grid-view {
+  &:before {
+    content: $ico-grid-view;
+  }
+}
+.ico-group-add {
+  &:before {
+    content: $ico-group-add;
+  }
+}
+.ico-group-proj {
+  &:before {
+    content: $ico-group-proj;
+  }
+}
+.ico-home {
+  &:before {
+    content: $ico-home;
+  }
+}
+.ico-homepage {
+  &:before {
+    content: $ico-homepage;
+  }
+}
+.ico-ic_History-log {
+  &:before {
+    content: $ico-ic_History-log;
+  }
+}
+.ico-ic_history {
+  &:before {
+    content: $ico-ic_history;
+  }
+}
+.ico-image {
+  &:before {
+    content: $ico-image;
+  }
+}
+.ico-inbox-paper {
+  &:before {
+    content: $ico-inbox-paper;
+  }
+}
+.ico-info-black {
+  &:before {
+    content: $ico-info-black;
+  }
+}
+.ico-in-progress {
+  &:before {
+    content: $ico-in-progress;
+  }
+}
+.ico-instagram-circle {
+  &:before {
+    content: $ico-instagram-circle;
+  }
+}
+.ico-insta-story {
+  &:before {
+    content: $ico-insta-story;
+  }
+}
+.ico-inventory {
+  &:before {
+    content: $ico-inventory;
+  }
+}
+.ico-invite-person {
+  &:before {
+    content: $ico-invite-person;
+  }
+}
+.ico-list-view {
+  &:before {
+    content: $ico-list-view;
+  }
+}
+.ico-location {
+  &:before {
+    content: $ico-location;
+  }
+}
+.ico-location-1 {
+  &:before {
+    content: $ico-location-1;
+  }
+}
+.ico-map-pin {
+  &:before {
+    content: $ico-map-pin;
+  }
+}
+.ico-megaphone {
+  &:before {
+    content: $ico-megaphone;
+  }
+}
+.ico-message-board {
+  &:before {
+    content: $ico-message-board;
+  }
+}
+.ico-message-board-2 {
+  &:before {
+    content: $ico-message-board-2;
+  }
+}
+.ico-message-out {
+  &:before {
+    content: $ico-message-out;
+  }
+}
+.ico-message-outline {
+  &:before {
+    content: $ico-message-outline;
+  }
+}
+.ico-notification-active {
+  &:before {
+    content: $ico-notification-active;
+  }
+}
+.ico-notification-add {
+  &:before {
+    content: $ico-notification-add;
+  }
+}
+.ico-octicon-pin {
+  &:before {
+    content: $ico-octicon-pin;
+  }
+}
+.ico-package-box {
+  &:before {
+    content: $ico-package-box;
+  }
+}
+.ico-participant {
+  &:before {
+    content: $ico-participant;
+  }
+}
+.ico-paypal {
+  &:before {
+    content: $ico-paypal;
+  }
+}
+.ico-photo_size_select_actual {
+  &:before {
+    content: $ico-photo_size_select_actual;
+  }
+}
+.ico-pie-chart {
+  &:before {
+    content: $ico-pie-chart;
+  }
+}
+.ico-pinterest {
+  &:before {
+    content: $ico-pinterest;
+  }
+}
+.ico-pinterest-circle {
+  &:before {
+    content: $ico-pinterest-circle;
+  }
+}
+.ico-plus {
+  &:before {
+    content: $ico-plus;
+  }
+}
+.ico-podcast {
+  &:before {
+    content: $ico-podcast;
+  }
+}
+.ico-podcast-circle {
+  &:before {
+    content: $ico-podcast-circle;
+  }
+}
+.ico-podcast-no-bg {
+  &:before {
+    content: $ico-podcast-no-bg;
+  }
+}
+.ico-podcast-no-bg-large {
+  &:before {
+    content: $ico-podcast-no-bg-large;
+  }
+}
+.ico-present {
+  &:before {
+    content: $ico-present;
+  }
+}
+.ico-profile {
+  &:before {
+    content: $ico-profile;
+  }
+}
+.ico-profile-img-favor {
+  &:before {
+    content: $ico-profile-img-favor;
+  }
+}
+.ico-profile-phone {
+  &:before {
+    content: $ico-profile-phone;
+  }
+}
+.ico-rbl-2 {
+  &:before {
+    content: $ico-rbl-2;
+  }
+}
+.ico-recommend {
+  &:before {
+    content: $ico-recommend;
+  }
+}
+.ico-refund {
+  &:before {
+    content: $ico-refund;
+  }
+}
+.ico-replay-dash {
+  &:before {
+    content: $ico-replay-dash;
+  }
+}
+.ico-reply {
+  &:before {
+    content: $ico-reply;
+  }
+}
+.ico-rocket {
+  &:before {
+    content: $ico-rocket;
+  }
+}
+.ico-router-top {
+  &:before {
+    content: $ico-router-top;
+  }
+}
+.ico-sad {
+  &:before {
+    content: $ico-sad;
+  }
+}
+.ico-search {
+  &:before {
+    content: $ico-search;
+  }
+}
+.ico-selectall {
+  &:before {
+    content: $ico-selectall;
+  }
+}
+.ico-setting {
+  &:before {
+    content: $ico-setting;
+  }
+}
+.ico-settings-24px {
+  &:before {
+    content: $ico-settings-24px;
+  }
+}
+.ico-share {
+  &:before {
+    content: $ico-share;
+  }
+}
+.ico-shield {
+  &:before {
+    content: $ico-shield;
+  }
+}
+.ico-sort {
+  &:before {
+    content: $ico-sort;
+  }
+}
+.ico-sound-off {
+  &:before {
+    content: $ico-sound-off;
+  }
+}
+.ico-sound-on {
+  &:before {
+    content: $ico-sound-on;
+  }
+}
+.ico-stats {
+  &:before {
+    content: $ico-stats;
+  }
+}
+.ico-surfboard {
+  &:before {
+    content: $ico-surfboard;
+  }
+}
+.ico-three-point {
+  &:before {
+    content: $ico-three-point;
+  }
+}
+.ico-tiktok {
+  &:before {
+    content: $ico-tiktok;
+  }
+}
+.ico-tiktok-circle {
+  &:before {
+    content: $ico-tiktok-circle;
+  }
+}
+.ico-tiktok-no-bg {
+  &:before {
+    content: $ico-tiktok-no-bg;
+  }
+}
+.ico-triple-x {
+  &:before {
+    content: $ico-triple-x;
+  }
+}
+.ico-twitter-circle {
+  &:before {
+    content: $ico-twitter-circle;
+  }
+}
+.ico-user-group {
+  &:before {
+    content: $ico-user-group;
+  }
+}
+.ico-user-profile-list-2 {
+  &:before {
+    content: $ico-user-profile-list-2;
+  }
+}
+.ico-users {
+  &:before {
+    content: $ico-users;
+  }
+}
+.ico-user-spl {
+  &:before {
+    content: $ico-user-spl;
+  }
+}
+.ico-user-v2 {
+  &:before {
+    content: $ico-user-v2;
+  }
+}
+.ico-vector {
+  &:before {
+    content: $ico-vector;
+  }
+}
+.ico-Wallet-icon {
+  &:before {
+    content: $ico-Wallet-icon;
+  }
+}
+.ico-warning {
+  &:before {
+    content: $ico-warning;
+  }
+}
+.ico-world {
+  &:before {
+    content: $ico-world;
+  }
+}
+.ico-wysiwyg {
+  &:before {
+    content: $ico-wysiwyg;
+  }
+}
+.ico-x {
+  &:before {
+    content: $ico-x;
+  }
+}
+.ico-youtube {
+  &:before {
+    content: $ico-youtube;
+  }
+}
+.ico-youtube-circle {
+  &:before {
+    content: $ico-youtube-circle;
+  }
+}
+.ico-add_location_alt {
+  &:before {
+    content: $ico-add_location_alt;
+  }
+}
+.ico-email {
+  &:before {
+    content: $ico-email;
+  }
+}
+.ico-phone-1 {
+  &:before {
+    content: $ico-phone-1;
+  }
+}
+.ico-not_listed_location {
+  &:before {
+    content: $ico-not_listed_location;
+  }
+}
+.ico-info {
+  &:before {
+    content: $ico-info;
+  }
+}
+.ico-location_on {
+  &:before {
+    content: $ico-location_on;
+  }
+}
+.ico-close-small {
+  &:before {
+    content: $ico-close-small;
+  }
+}
+.ico-visibility-on {
+  &:before {
+    content: $ico-visibility-on;
+  }
+}
+.ico-visibility-off {
+  &:before {
+    content: $ico-visibility-off;
+  }
+}
+.ico-verified {
+  &:before {
+    content: $ico-verified;
+  }
+}
+.ico-add-contact {
+  &:before {
+    content: $ico-add-contact;
+  }
+}
+.ico-edit-1 {
+  &:before {
+    content: $ico-edit-1;
+  }
+}
+.ico-user-profile {
+  &:before {
+    content: $ico-user-profile;
+  }
+}
+.ico-link-plus {
+  &:before {
+    content: $ico-link-plus;
+  }
+}
+.ico-facebook {
+  &:before {
+    content: $ico-facebook;
+  }
+}
+.ico-insta-outline {
+  &:before {
+    content: $ico-insta-outline;
+  }
+}
+.ico-insta-reel {
+  &:before {
+    content: $ico-insta-reel;
+  }
+}
+.ico-twitter {
+  &:before {
+    content: $ico-twitter;
+  }
+}
+.ico-create-group {
+  &:before {
+    content: $ico-create-group;
+  }
+}
+.ico-arrow-down-more {
+  &:before {
+    content: $ico-arrow-down-more;
+  }
+}
+

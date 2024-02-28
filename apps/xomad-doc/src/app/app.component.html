@@ -1,0 +1,29 @@
+<header>
+  <h1>Xomad Documentation</h1>
+</header>
+
+<section>
+  <div class="wrapper">
+    hello there
+  </div>
+  <div class="wrapper" style="display: inline-block">
+    <h3>TABLE OF CONTENT</h3>
+    <ul>
+      <li><i class="ico ico-home"></i></li>
+      <li>mot</li>
+      <li>hai</li>
+      <li>ba</li>
+      <li>b</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <xo-reorder-grid class="reorder" [items]="items" itemsPerRow="4">
+    <ng-template xoReorderItem let-media let-index="index">
+        <div class="number">
+          {{ media }}
+        </div>
+    </ng-template>
+  </xo-reorder-grid>
+</section>

@@ -1,0 +1,181 @@
+{
+  "version": 1,
+  "projects": {
+    "xomad-doc": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/xomad-doc",
+      "sourceRoot": "apps/xomad-doc/src",
+      "prefix": "web-core",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/xomad-doc",
+            "index": "apps/xomad-doc/src/index.html",
+            "main": "apps/xomad-doc/src/main.ts",
+            "polyfills": "apps/xomad-doc/src/polyfills.ts",
+            "tsConfig": "apps/xomad-doc/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/xomad-doc/src/favicon.ico",
+              "apps/xomad-doc/src/assets",
+              {
+                "glob": "**/*",
+                "input": "libs/@xomad/web-core/icons/icomoon/fonts",
+                "output": "libs/@xomad/web-core/icons/icomoon/fonts"
+              }
+            ],
+            "styles": [
+              "apps/xomad-doc/src/styles.scss",
+              "node_modules/shepherd.js/dist/css/shepherd.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/xomad-doc/src/environments/environment.ts",
+                  "with": "apps/xomad-doc/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "xomad-doc:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "xomad-doc:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "xomad-doc:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/xomad-doc/tsconfig.app.json",
+              "apps/xomad-doc/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/xomad-doc/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/xomad-doc/jest.config.js",
+            "tsConfig": "apps/xomad-doc/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "apps/xomad-doc/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "xomad-doc-e2e": {
+      "root": "apps/xomad-doc-e2e",
+      "sourceRoot": "apps/xomad-doc-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/xomad-doc-e2e/cypress.json",
+            "tsConfig": "apps/xomad-doc-e2e/tsconfig.e2e.json",
+            "devServerTarget": "xomad-doc:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "xomad-doc:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/xomad-doc-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/xomad-doc-e2e/**/*"]
+          }
+        }
+      }
+    },
+    "web-core": {
+      "projectType": "library",
+      "root": "libs/@xomad/web-core",
+      "sourceRoot": "libs/@xomad/web-core",
+      "prefix": "xo",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/@xomad/web-core/tsconfig.lib.json",
+            "project": "libs/@xomad/web-core/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/@xomad/web-core/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["libs/@xomad/web-core/tsconfig.lib.json"],
+            "exclude": ["**/node_modules/**", "!libs/@xomad/web-core/**/*"]
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  },
+  "defaultProject": "xomad-doc"
+}

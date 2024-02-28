@@ -1,0 +1,40 @@
+/*
+ * Remove template code below
+ */
+:host {
+  header {
+    padding: var(--space-sm) var(--space-md);
+    background: var(--color-primary);
+    color: var(--white);
+
+    font-weight: 700;
+    font-size: var(--text-lg-size);
+    line-height: var(--text-lg-line-height);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: var(--space-xxs);
+  }
+
+  section {
+    display: flex;
+    width: var(--screen-lg-max);
+    margin-inline: auto;
+    gap: var(--space-xs);
+    align-items: start;
+
+    box-shadow: var(--box-shadow);
+
+    > * {
+      flex: 1;
+    }
+
+    .reorder {
+      width: 1000px;
+
+      .number {
+        aspect-ratio: 1/1;
+        border: 1px dashed var(--color-secondary);
+      }
+    }
+  }
+}
